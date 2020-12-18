@@ -1,6 +1,6 @@
 const img = document.querySelector('img');
 
-fetch('https://api.giphy.com/v1/gifs/translate?api_key=k4rXUclbltEhgYXZHyKuxVa39llGTWba&s=cats', {mode: 'cors'})
+fetch('https://api.giphy.com/v1/gifs/translate?api_key=k4rXUclbltEhgYXZHyKuxVa39llGTWba&s=meme', {mode: 'cors'})
     .then(function(response) {
         return response.json();
     })
@@ -11,6 +11,14 @@ fetch('https://api.giphy.com/v1/gifs/translate?api_key=k4rXUclbltEhgYXZHyKuxVa39
         nextGif.addEventListener('click', () => {
             window.location.reload();
         })
+
+        document.body.onkeydown = function(e) {
+            e.key === ' ' 
+            ? window.location.reload()
+            : e.key === 'ArrowRight' 
+                ? window.location.reload() 
+                : console.log('do nothing');
+        }
 
         const tempInput = document.createElement('textArea');
         const main = document.querySelector('.main');
