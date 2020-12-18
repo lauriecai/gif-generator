@@ -32,7 +32,7 @@ main{
 .main-btn-group{
     background-color: lightgreen;
     text-align: center;
-    margin: 0 auto 2.4rem;
+    margin: 0 auto 5rem;
 }
 .btn{
     border: 3px solid #1b1c1f;
@@ -60,4 +60,9 @@ main{
     margin: 0 auto;
 }
 
+/* hiding textArea (dynamically created to hold selectable URL) */
+textarea{
+    opacity: 0;
+    pointer-events: none;
+}
 
